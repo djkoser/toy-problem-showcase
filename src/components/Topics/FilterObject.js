@@ -12,12 +12,9 @@ class FilterObject extends Component {
       {name:'jessica', age:20, education: 'college'}
     ],
       userInput: "",
-      filteredArray:[],
-      displayPlaceholder:"Filtered results will appear here"
+      filteredArray:"Filtered results will appear here",
     }; 
   }
-
-
 
   filterObject() {
     let objArrayCopy = this.state.unfilteredArray.slice(); 
@@ -25,7 +22,6 @@ class FilterObject extends Component {
     this.setState({
       filteredArray: objArrayCopy,
       userInput: "",
-      displayPlaceholder: JSON.stringify(objArrayCopy)
     });
   }
 
@@ -37,7 +33,7 @@ class FilterObject extends Component {
         <span className='puzzleText'>{JSON.stringify(this.state.unfilteredArray)}</span>
         <input placeholder="Enter filter criteria" className='inputLine' onChange={(event) => this.setState({userInput: event.target.value})} value = {this.state.userInput}></input>
         <button onClick={() => this.filterObject()}className= 'confirmationButton'>Submit</button>
-        <span className='resultsBox filterObjectRB'>{this.state.displayPlaceholder}</span>
+        <span className='resultsBox filterObjectRB'>{JSON.stringify(this.state.filteredArray)}</span>
       </div>
     )
   }
