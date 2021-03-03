@@ -11,17 +11,6 @@ class Palindrome extends Component {
       palindrome:"Is your text a palindrome?"
     }
   }
-  render() {
-    // console.log (this.state.palindrome)
-    return (
-      <div className='puzzleBox filterStringPB'>
-        <h4>Palindrome</h4>
-        <input value={this.state.userInput} className='inputLine' placeholder='Enter text to test for palindrome' onChange={event=>this.setState({userInput: event.target.value})}></input>
-        <button className='confirmationButton' onClick={()=>this.sameBkAsFw()}>Submit</button>
-        <span className='resultsBox'>{this.state.palindrome}</span>
-      </div>
-    )
-  }
   
   sameBkAsFw() {
     let palindrome = [];
@@ -42,6 +31,18 @@ class Palindrome extends Component {
         userInput: ""
       })
     }
+  }
+
+  render() {
+    // console.log (this.state.palindrome)
+    return (
+      <div className='puzzleBox palindromePB'>
+        <h4>Palindrome</h4>
+        <input value={this.state.userInput} className='inputLine' placeholder='Enter text to test for palindrome' onChange={event=>this.setState({userInput: event.target.value})}></input>
+        <button className='confirmationButton' onClick={()=>this.sameBkAsFw()}>Submit</button>
+        <span className='resultsBox'>{this.state.palindrome}</span>
+      </div>
+    )
   }
 }
 export default Palindrome;

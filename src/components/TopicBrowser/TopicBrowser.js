@@ -5,6 +5,7 @@ import FilterObject from '../Topics/FilterObject';
 import FilterString from '../Topics/FilterString';
 import Palindrome from '../Topics/Palindrome';
 import Sum from '../Topics/Sum';
+import AlphabetWPosition from '../Topics/AlphabetWPosition';
 
 class TopicBrowser extends Component {
   constructor (props) {
@@ -19,6 +20,7 @@ class TopicBrowser extends Component {
         <FilterString/>
         <Palindrome/>
         <Sum/>
+        <AlphabetWPosition/>
       </div>
     )
   }

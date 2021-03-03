@@ -50,6 +50,9 @@ body {
   height: 270px;
 }
 
+.alphabetPosPB {
+  height: 300px
+}
 .resultsBox {
   width: 360px;
   height: 20px;
@@ -69,6 +72,10 @@ body {
 
 .filterStringRB {
   height: 60px;
+}
+
+.alphabetPosRB {
+  height:90px;
 }
 
 .inputLine {
