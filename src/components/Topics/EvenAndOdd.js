@@ -26,12 +26,13 @@ class EvenAndOdd extends Component {
   }
 
   render() {
+    
     return (
       <div className="puzzleBox evenAndOddPB">
         <h4>Evens And Odds</h4>
-        <input className="inputLine" onChange={(event) => this.setState({
+        <input placeholder="Enter digits separated by commas" className="inputLine" onChange={(event) => this.setState({
           userInput: event.target.value
-        })} value= {this.state.userInput}></input>
+        })} value={this.state.userInput}></input>
         <button className="confirmationButton" onClick={()=>this.evenAndOdd()}> Submit</button>
         <span className="resultsBox">Evens: {this.state.evenArray.join(', ')}</span>
         <span className="resultsBox">Odds: {this.state.oddArray.join(', ')}</span>

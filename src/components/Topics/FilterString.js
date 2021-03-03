@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
 class FilterString extends Component {
-  constructor (props) {
-    super(props); 
-  }
-  render() {
+  render () {
     return (
-      <p>Filter String</p>
+      <p>FilterString</p>
     )
   }
 }
+
+
+
 
 export default FilterString
 
