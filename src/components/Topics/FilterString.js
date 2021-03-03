@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class FilterString extends Component {
   constructor (props) {
     super(props);
-    this.state = {
+    this.state={
       userInput:"",
       filteredArray:[],
       unfilteredArray:['In','the','old','town','old','where','I','was','old','born','there','old','lived','a','old','man','who','sailed','to','old','sea'],
@@ -12,10 +12,9 @@ class FilterString extends Component {
   }
 
   stringFilter() {
-    let copy = this.state.unfilteredArray.slice();
-    let lowerCaseInput = this.state.userInput.toLowerCase();
-    copy = copy.filter(el=> el.toLowerCase()===lowerCaseInput?false:true);
-    console.log(copy); 
+    let copy=this.state.unfilteredArray.slice();
+    let lowerCaseInput=this.state.userInput.toLowerCase();
+    copy=copy.filter(el=>el.toLowerCase()===lowerCaseInput?false:true); 
     this.setState({
       filteredArray: copy,
       displayTextPlaceholder: "",
@@ -25,12 +24,12 @@ class FilterString extends Component {
   }
   render () {
     return (
-      <div className = 'puzzleBox filterStringPB'>
+      <div className='puzzleBox filterStringPB'>
         <h4>Filter String</h4>
         <span className='puzzleText'>{this.state.unfilteredArray.join(" ")}</span>
         <input className='inputLine' placeholder="Enter string to filter" onChange={event=> this.setState({userInput:event.target.value})} value={this.state.userInput}></input>
         <button className='confirmationButton' onClick={()=> this.stringFilter()}>Submit</button>
-        <span className='resultsBox filterStringRB'> <strong>{this.state.displayTextPlaceholder}</strong> {this.state.filteredArray.join(" ")}</span>
+        <span className='resultsBox filterStringRB'><strong>{this.state.displayTextPlaceholder}</strong>{this.state.filteredArray.join(" ")}</span>
       </div>
     )
   }

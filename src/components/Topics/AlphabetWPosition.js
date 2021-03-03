@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AlphabetWPosition extends Component {
   constructor (props) {
     super(props);
-    this.state = {
+    this.state={
       userInput: "",
       positionsList: ""
     }
@@ -11,8 +11,8 @@ class AlphabetWPosition extends Component {
   
   
   replaceWithPosition(){
-    let arr = this.state.userInput.toLowerCase();
-    arr=arr.replace(/[^a-z]/g,"").split("").map(c=> c.charCodeAt(0)-96).join(", ");
+    let arr=this.state.userInput.toLowerCase();
+    arr=arr.replace(/[^a-z]/g,"").split("").map(c=>c.charCodeAt(0)-96).join(", ");
     this.setState({
       positionsList:arr,
       userInput:""

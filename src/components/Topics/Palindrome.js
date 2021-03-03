@@ -13,13 +13,13 @@ class Palindrome extends Component {
   }
   
   sameBkAsFw() {
-    let palindrome = [];
-    let input = this.state.userInput.toLowerCase().split("");
+    let palindrome=[];
+    let input=this.state.userInput.toLowerCase().split("");
     for (let i=0; i<input.length; i++) {
       palindrome.unshift(input[i]);
     }
-    palindrome = palindrome.join();
-    input = input.join(); 
+    palindrome=palindrome.join();
+    input=input.join(); 
     if (palindrome===input) {
       this.setState({
         palindrome: "Your text is a palindrome!",

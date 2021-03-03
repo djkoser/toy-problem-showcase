@@ -8,10 +8,6 @@ import Sum from '../Topics/Sum';
 import AlphabetWPosition from '../Topics/AlphabetWPosition';
 
 class TopicBrowser extends Component {
-  constructor (props) {
-    super(props); 
-  };
-  
   render () {
     return (
       <div>

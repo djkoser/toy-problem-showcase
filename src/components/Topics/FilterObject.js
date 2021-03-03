@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class FilterObject extends Component {
   constructor (props) {
     super(props);
-    this.state = {
+    this.state={
       unfilteredArray: [
       {name:'susan', age:30, eyecolor: 'green'},
       {name:'bob', age:50, sport:'tennis'},
@@ -17,8 +17,8 @@ class FilterObject extends Component {
   }
 
   filterObject() {
-    let objArrayCopy = this.state.unfilteredArray.slice(); 
-    objArrayCopy = objArrayCopy.filter(el=> el[this.state.userInput]==null?true:false)
+    let objArrayCopy=this.state.unfilteredArray.slice(); 
+    objArrayCopy=objArrayCopy.filter(el=>el[this.state.userInput]==null?true:false)
     this.setState({
       filteredArray: objArrayCopy,
       userInput: "",
@@ -26,13 +26,12 @@ class FilterObject extends Component {
   }
 
   render() {
-    console.log(this.state.filteredArray)
     return (
       <div className='puzzleBox filterObjectPB'>
         <h4>Filter Object</h4>
         <span className='puzzleText'>{JSON.stringify(this.state.unfilteredArray)}</span>
-        <input placeholder="Enter filter criteria" className='inputLine' onChange={(event) => this.setState({userInput: event.target.value})} value = {this.state.userInput}></input>
-        <button onClick={() => this.filterObject()}className= 'confirmationButton'>Submit</button>
+        <input placeholder="Enter filter criteria" className='inputLine' onChange={(event)=>this.setState({userInput: event.target.value})} value={this.state.userInput}></input>
+        <button onClick={()=>this.filterObject()}className='confirmationButton'>Submit</button>
         <span className='resultsBox filterObjectRB'>{JSON.stringify(this.state.filteredArray)}</span>
       </div>
     )

@@ -13,9 +13,9 @@ class EvenAndOdd extends Component {
   };
 
   evenAndOdd() {
-    let arrayCopy = this.state.userInput.split(",");
-    let evens = arrayCopy.filter(el=> el%2===0 ? true : false);
-    let odds = arrayCopy.filter(el=> el%2===0 ? false :true);
+    let arrayCopy=this.state.userInput.split(",");
+    let evens=arrayCopy.filter(el=>el%2===0 ? true : false);
+    let odds=arrayCopy.filter(el=>el%2===0 ? false :true);
 
     this.setState({
       evenArray: evens,
@@ -30,7 +30,7 @@ class EvenAndOdd extends Component {
     return (
       <div className="puzzleBox evenAndOddPB">
         <h4>Evens And Odds</h4>
-        <input placeholder="Enter digits separated by commas" className="inputLine" onChange={(event) => this.setState({
+        <input placeholder="Enter digits separated by commas" className="inputLine" onChange={(event)=>this.setState({
           userInput: event.target.value
         })} value={this.state.userInput}></input>
         <button className="confirmationButton" onClick={()=>this.evenAndOdd()}> Submit</button>
